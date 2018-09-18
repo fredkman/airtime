@@ -16,7 +16,7 @@
                             <p>Your line have been credited with #{{$amount}}  from your account</p>
                         <small>your new balance is #{{$update->acct_bal-$amount}}</small>
 
-                            {{\App\Http\Controllers\ProcessController::checkBalance() }}
+                            {{--{{\App\Http\Controllers\ProcessController::checkBalance() }}--}}
                         @endif
 
                        {{--}} You are logged in! {{ Auth::user()->name }} --}}

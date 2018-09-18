@@ -71,10 +71,15 @@ class ProcessController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public static function  update(Request $request, $id)
+    public static function  update(Request $request)
     {
         //create post
-
+//        $post = User::find(Auth::user()->id);
+//        $acct = User::find(Auth::user()->acct_bal);
+//
+//        $amount = $request->input('amount');
+//        $post->acct_bal = $acct - $amount;
+//        $post->save();
     }
 
     /**
@@ -97,22 +102,4 @@ class ProcessController extends Controller
         return view('up_info', compact('update', 'amount'));
 
     }
-
-    public static function checkBalance() {
-
-        $post = User::find($id);
-        $amount = $request->input('amount');
-        $post->acct_bal = $post - $amount;
-        $post->save();
-
-
-
-        //$update = User::find(Auth::user()->id);
-       // return view('up_info', compact('update', 'amount'));
-
-    }
-
-
-
-
 }
